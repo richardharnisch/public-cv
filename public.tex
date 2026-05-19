@@ -1,0 +1,89 @@
+% !TeX TS-program = pdflatex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=1.1cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{lmodern,textcomp}
+
+\hypersetup{
+    pdfauthor={Richard Harnisch},
+    pdftitle={Richard Harnisch - Curriculum Vitae},
+    pdfsubject={Curriculum Vitae},
+    pdfkeywords={Richard Harnisch, CV, Machine Learning},
+    pdfproducer={LaTeX},
+    pdfcreator={pdflatex}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.09em}
+\setlist[itemize]{leftmargin=1.15em, itemsep=0.05em, topsep=0.12em, parsep=0pt, partopsep=0pt}
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{0.48em}{0.22em}
+\newcommand{\cvheading}[4]{\textbf{#1}\hfill #2\\\emph{#3}\hfill #4\par}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Richard Harnisch}}\\[-0.05em]
+    \href{mailto:richitdd@gmail.com}{richitdd@gmail.com} \quad
+    \href{https://www.linkedin.com/in/richardhar}{linkedin.com/in/richardhar} \quad
+    \href{https://github.com/richardharnisch}{github.com/richardharnisch}
+\end{center}
+
+\section*{Education}
+\cvheading{BSc Artificial Intelligence (180 ECTS), cum laude, GPA 8.3/10}{2022--2026}{University of Groningen}{}
+\begin{itemize}
+    \item Thesis: Interpolation Threshold and Double Descent in RL. Tracked Fisher Information Matrix trace across over-parameterized agents; found local curvature can decouple from the generalization gap under policy-induced non-stationarity.
+    \item Formal math/CS foundations: Calculus for Artificial Intelligence; Linear Algebra and Multivariable Calculus; Statistics; Analysis; Probability Theory; Probability and Measure; Linear Algebra 2; Partial Differential Equations; Imperative Programming (for AI); Algorithms and Data Structures (AI); Object-Oriented Programming.
+    \item Advanced AI/ML: Applied Machine Learning, Reinforcement Learning, Uncertainty in ML, Machine Translation (9.5 each); Neural Networks, Natural Language Processing (9 each); Advanced Logic (8.5).
+\end{itemize}
+\cvheading{International Baccalaureate; German Abitur 1.0}{2020--2022}{Dresden International School}{42/45 points}
+Higher Level Mathematics 7/7, Physics 7/7, Economics; maximum marks in Mathematics, Physics, German, Spanish. Extended Essay on RSA public-key cryptography and vulnerabilities.
+
+\section*{Research and ML Experience}
+\cvheading{Data Science Intern}{2025--2026}{Nederlandse Gasunie}{Groningen/Remote}
+\begin{itemize}
+    \item Developed a day-ahead electricity price forecasting system using SARIMA, LSTMs, and Transformers in 5-person team. % under the Chief Data Scientist.
+    \item Designed and deployed distribution-shift monitoring over ENTSO-E price data and Dutch grid-production data; system alerts operators and triggers retraining under covariate drift; worked directly with Chief Data Scientist.
+    \item Conducted feature engineering and data management for real-world forecasting in a grid undergoing renewable- and geopolitics-driven distribution shifts.
+\end{itemize}
+\cvheading{Bachelor's Thesis Research}{2025--2026}{University of Groningen}{Supervisor: Dr.\ Matthia Sabatelli}
+\begin{itemize}
+    \item Investigated the interpolation threshold and Double Descent phenomenon in over-parameterized RL agents under non-stationary data distributions.
+    \item Tracked the Fisher Information Matrix (FIM) trace as a generalization metric across constrained policy optimizers (TRPO) at varying model capacity and training durations.
+    \item Found empirical evidence that FIM decorrelates from the generalization gap under policy-induced non-stationarity: constrained optimizers exhibit expected FIM spike near the interpolation threshold, but the curvature signal does not predict generalization gap evolution, challenging the applicability of classical information-geometric bounds in RL.
+    \item Raises open questions about the role of implicit regularization and optimizer geometry in non-stationary generalization.
+\end{itemize}
+\cvheading{ML Engineer and Software Developer}{2024--2026}{descript GmbH}{Dresden/Remote}
+\begin{itemize}
+    \item Independently led an industrial ML research collaboration with TU Dresden on textile defect detection; defined project methodology as nested ablations over synthetic data augmentation strategies to maximize learning from limited data.
+    \item Built Django interface for expert consensus labelling with confidence-based sample prioritization on unlabelled data.
+    \item Engineered production features from client requirements, including a scheduling system for hospitality room management.
+\end{itemize}
+\cvheading{Teaching Assistant, Introduction to Machine Learning}{2025--2026}{University of Groningen}{}
+\begin{itemize}
+    \item Led lab sessions and graded assignments for 100 second-year AI students, communicated concepts to varied audience.
+    \item Topics: ML paradigms, model selection, regularization, evaluation metrics, data ingestion, processing and augmentation.
+\end{itemize}
+\cvheading{Commissioner of Educational Affairs}{2023--2024}{Study Association Cover}{Groningen}
+\begin{itemize}
+    \item Board of association with 160k€ annual spending, organized extracurricular ML lecture series in collaboration with faculty; designed and led RL chess-bot competition including competition infrastructure; Board of Advisors 2024--2025.
+\end{itemize}
+\cvheading{Software Engineering Intern}{2019}{descript GmbH}{Dresden}
+\begin{itemize}
+    \item Designed and deployed a live CI/CD pipeline status monitoring system using GitLab API and Vue.js.
+\end{itemize}
+
+\section*{Selected Projects}
+\textbf{Plant Disease Classifier.} End-to-end image classification with uncertainty calibration, model compression for edge deployment, ResNets/EfficientNets/SVMs/ensembles, and FastAPI serving; course grade 9.5/10.\\
+\textbf{Mars Rover Competition.} Authored technical report for European Space Agency rover competition and presented with MakerCie team; placed 1st overall among 33 teams and received maximum points for presentation.
+\vfill
+\textbf{Languages:} English (TOEFL 6/6) and German native or native-equivalent; Dutch and Spanish conversational.
+
+\end{document}
